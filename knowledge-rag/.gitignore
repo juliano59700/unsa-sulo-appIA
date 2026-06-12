@@ -1,0 +1,66 @@
+# Runtime
+venv/
+__pycache__/
+*.pyc
+data/
+
+# User config (personal settings — use presets/ as starting point)
+config.yaml
+
+# Personal documents (NEVER commit — user-populated content)
+documents/aar/
+documents/security/
+documents/logscale/
+documents/general/
+documents/ctf/
+documents/development/
+documents/documents/
+
+# Sensitive file formats (extra safety layer)
+documents/**/*.pdf
+documents/**/*.docx
+documents/**/*.xlsx
+documents/**/*.pptx
+documents/**/*.csv
+
+# Keep example docs
+!documents/examples/
+!documents/examples/**
+
+# FastEmbed model cache
+.cache/
+models_cache/
+*.onnx
+
+# Local one-off scripts (not part of distribution)
+# Note: tracked utility scripts under scripts/ (e.g. check_version_sync.py) are
+# committed; this rule only catches ad-hoc local files outside that directory.
+setup-notebook.ps1
+demo-real.yml
+documents/.sync-log.txt
+documents/README-CATEGORIES.md
+
+# Temp/junk
+*.b64
+*.tar.gz
+*.bak
+
+# Type-checker cache (per-Python-version, auto-generated)
+.mypy_cache/
+
+# Hypothesis property-based testing cache (auto-generated)
+.hypothesis/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+dist/
+.ruff_cache/
+.pytest_cache/
