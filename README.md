@@ -93,6 +93,25 @@ unsa-sulo-app/
 
 **Total ≈ 0 à 3 €/mois pour un usage syndical normal.**
 
+## Serveur MCP Gladia (transcription audio)
+
+Le dossier `mcp-gladia/` contient un serveur MCP pour la transcription et l'analyse audio/vidéo via l'API [Gladia](https://gladia.io) (10 h gratuites/mois). Il est déclaré dans `.mcp.json` à la racine, donc disponible automatiquement dans Claude Code.
+
+Configuration :
+
+1. Crée une clé API sur https://app.gladia.io/apikeys
+2. Exporte-la avant de lancer Claude Code : `export GLADIA_API_KEY=ta-clé`
+
+Au premier lancement, le serveur installe ses dépendances et se compile tout seul. Pour le faire manuellement :
+
+```bash
+cd mcp-gladia
+npm ci
+npm run build
+```
+
+Outils exposés : `upload_file`, `transcribe` (diarisation, traduction, résumé, sentiment…), `transcription_status`, `list_jobs`, `delete_job`. Voir `mcp-gladia/README.md` pour le détail.
+
 ## Support
 
 Application développée comme prototype. Pour usage public officiel UNSA :

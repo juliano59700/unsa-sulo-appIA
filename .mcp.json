@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gladia": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "cd mcp-gladia && { [ -d node_modules ] || npm ci --silent; } && { [ -f dist/index.js ] || npm run build --silent; } && exec node dist/index.js"
+      ],
+      "env": {
+        "GLADIA_API_KEY": "${GLADIA_API_KEY}"
+      }
+    }
+  }
+}
