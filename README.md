@@ -100,7 +100,13 @@ Le dossier `mcp-gladia/` contient un serveur MCP pour la transcription et l'anal
 Configuration :
 
 1. Crée une clé API sur https://app.gladia.io/apikeys
-2. Exporte-la avant de lancer Claude Code : `export GLADIA_API_KEY=ta-clé`
+2. Mets-la dans `mcp-gladia/.env` (fichier gitignoré, jamais commité) :
+
+   ```bash
+   echo "GLADIA_API_KEY=ta-clé" > mcp-gladia/.env
+   ```
+
+   Ou exporte-la avant de lancer Claude Code : `export GLADIA_API_KEY=ta-clé`
 
 Au premier lancement, le serveur installe ses dépendances et se compile tout seul. Pour le faire manuellement :
 
